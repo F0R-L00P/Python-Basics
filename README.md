@@ -55,11 +55,76 @@ In Python, text in between quotes is a string data type. An integer is a whole n
 ## Implicit vs Explicit Conversion
 Some data types can be mixed and matched due to implicit conversion. For example, adding int with float. Implicit conversion is where the interpreter helps us out and automatically converts one data type into another, without having to explicitly tell it to do so.
 
-Explicit conversion is where we manually convert from one data type to another by calling the relevant function for the data type we want to convert to. For example, when we wanted to print a number alongside some text. Before we could do that, we needed to call the str() function to convert the number into a string. Once the number was explicitly converted to a string, we could join it with the rest of our textual string and print the result.
+Explicit conversion is where we manually convert from one data type to another by calling the relevant function for the data type we want to convert to. For example, when we wanted to print a number alongside some text. Before we could do that, we needed to call the str() function to convert the number into a string. Once the number was explicitly converted to a string, we could join it with the rest of our textual string and print the result.  
 
 ```python
 number = 2
 print("I have " + str(number) + "apples")
 "I have 2 apples"
+```
+## Functions
+A reference guide for functions
 
+**return value** - the value or variable returned as the end result of a function
+
+**parameter (argument)** -  a value passed into a function for use within the function
+
+**refactoring code** - a process to restructure code without changing functionality
+
+The purpose of the **def()** keyword is to define a new function. Best practices for writing code that is readable and reusable:
+
+**Create a reusable function** - Replace duplicate code with one reusable function to make the code easier to read and repurpose.
+
+**Refactor code** - Update code so that it is self-documenting and the intent of the code is clear.
+
+**Add comments** - Adding comments is part of creating self-documenting code. Using comments allows you to leave notes to yourself and/or other programmers to make the purpose of the code clear.
+
+## Comparison Operators with Equations
+The following examples demonstrate how to use comparison operators with the data types int and float. Comparison operators return Boolean results. 
+
+Boolean is a data type that can hold only one of two values: `True` or `False`.  
+
+The comparison operators include: 
+
+- `==` (equality)
+- `!=` (not equal to)
+- `>` (greater than)
+- `<` (less than)
+- `>=` (greater than or equal to)
+- `<=` (less than or equal to)
+ 
+
+## PART 1: Equality == and Not Equal To != Operators
+In Python, you can use comparison operators to compare values. When a comparison is made, Python returns a Boolean result: **True** or **False**. Note that Boolean data types are not string data types (Boolean True is not equal to the string "True").  
+
+To check if two values are the same, use the **equality operator: ==**
+
+To check if two values are not the same, use the **not equal to operator: !=**
+
+```python
+print(32 == 30+2)   # The == operator checks if the 2 values are 
+True                # equal to each other. If they are equal, 
+                    # Python returns a True result.
+
+
+print(5+10 == 6+7)  # If the two values are not equal, as in the
+False               # expression 5+10 == 6+7 (or 15 == 13), Python          
+                    # returns a False result.
+
+
+print(10-4 != 10+4) # The != operator checks if the 2 values are
+True                # NOT equal to each other. If true, Python              
+                    # returns a True result. 
+
+
+
+print(9/3 != 3*1)   # In this last example, 9/3 != 3*1 (or 3 != 3)
+False               # is false. So, Python returns a False value.
+```
+## PART 2: Greater Than > and Less Than < Operators
+The comparison operators greater than `>` and less than `<` also return a `True` or `False` Boolean result after comparing two values.
+
+To check if one value is larger than another value, use the greater than operator: `>` 
+
+To check if one value is smaller than another value, use the less than operator: `<` 
 
