@@ -127,4 +127,34 @@ The comparison operators greater than `>` and less than `<` also return a `True`
 To check if one value is larger than another value, use the greater than operator: `>` 
 
 To check if one value is smaller than another value, use the less than operator: `<` 
+```python
+print(11 > 3*3)         # The > operator checks if the left value is
+True                    # greater than the right value. If true, it
+                        # returns a True result.
+```
+## PART 3: Greater Than or Equal to >= and Less Than or Equal to <= Operators
+Like the other comparison operators, the greater than or equal to `>=` and less than or equal to `<=` operators return a `True` or `False` Boolean result when a comparison is made.
 
+To check if one value is larger than or equal to another value, use the greater than or equal to operator: `>=` 
+
+To check if one value is smaller than or equal to another value, use the less than or equal to operator: `<=` 
+```python
+print(12*2 >= 24)   # The >= operator checks if the left value is
+True                # greater than or equal to the right value. 
+                    # If one of these conditions is true,  
+                    # Python returns a True result. In this case  
+                    # the two values are equal. So, the comparison
+                    # returns a True result.
+```
+## Key Takeaways
+
+Python comparison operators return Boolean results: `True` or `False`.
+
+| Symbol | Name                               | Expression | Description                        |
+|--------|------------------------------------|------------|------------------------------------|
+| `==`   | Equality operator                  | `a == b`   | `a` is equal to `b`                |
+| `!=`   | Not equal to operator              | `a != b`   | `a` is not equal to `b`            |
+| `>`    | Greater than operator              | `a > b`    | `a` is larger than `b`             |
+| `>=`   | Greater than or equal to operator  | `a >= b`   | `a` is larger than or equal to `b` |
+| `<`    | Less than operator                 | `a < b`    | `a` is smaller than `b`            |
+| `<=`   | Less than or equal to operator     | `a <= b`   | `a` is smaller than or equal to `b`|
