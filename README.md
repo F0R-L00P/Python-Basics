@@ -158,3 +158,25 @@ Python comparison operators return Boolean results: `True` or `False`.
 | `>=`   | Greater than or equal to operator  | `a >= b`   | `a` is larger than or equal to `b` |
 | `<`    | Less than operator                 | `a < b`    | `a` is smaller than `b`            |
 | `<=`   | Less than or equal to operator     | `a <= b`   | `a` is smaller than or equal to `b`|
+
+## while Loops
+A `while` loop executes the body of the loop while a specified condition remains True. They are commonly used when there’s an unknown number of operations to be performed, and a condition needs to be checked at each iteration.
+
+```python
+while specified condition is True:
+    body of loop
+```
+## Common Errors in while Loops
+If you get an error message on a loop or it appears to hang, your debugging checklist should include the following checks:
+
+ 1. **Failure to initialize variables**. Make sure all the variables used in the loop’s condition are initialized before the loop.
+
+ 2. **Unintended infinite loops**. Make sure that the body of the loop modifies the variables used in the condition, so that the loop will eventually end for all possible values of the variables. You can often prevent an infinite loop by using the `break` keyword or by adding end criteria to the condition part of the `while loop`.
+
+## while Loop Terms
+
+**while loop** - Tells the computer to execute a set of instructions while a specified condition is True. In other words, while loops keep executing the same group of instructions until the condition becomes False.
+
+**infinite loop** - Missing a method for exiting the loop, causing the loop to run forever.
+
+**break** - A keyword that can be used to end a loop at a specific point. 
