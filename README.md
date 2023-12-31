@@ -180,3 +180,85 @@ If you get an error message on a loop or it appears to hang, your debugging chec
 **infinite loop** - Missing a method for exiting the loop, causing the loop to run forever.
 
 **break** - A keyword that can be used to end a loop at a specific point. 
+
+## For Loop
+For loops allow you to iterate over a sequence of values. Similar to if statements and while loops, for loops begin with the keyword `for`.
+```python
+for x in range(2, -2, -1):
+    print(x)
+# The loop should print 2, 1, 0, -1
+```
+## for Loops vs. while Loops
+`for` loops and `while` loops share several characteristics. Both loops can be used with a variety of data types, both can be nested, and both can be used with the keywords `break` and `continue`. However, there are important differences between the two types of loops: 
+
+* `while` loops are used when a segment of code needs to execute repeatedly `while` a condition is true
+* `for` loops iterate over a sequence of elements, executing the body of the loop for `each` element in the sequence
+
+**Syntax**
+The syntax of a for loop with the in keyword:
+```python
+for variable in sequence:
+    body of loop
+```
+**Common for Loop Structures**
+for Loop with range()
+
+The `range()` function can take up to three parameters. The roles of the three possible range(x,y,z) parameters are:
+* **x = Start** - Starting index position of the range
+  * Default index position is 0.
+  * The starting index position is included in the range.
+  * Example syntax: range(**2**, y, z) or range(**x+3**, y, z)
+* **y = Stop** - Ending index position of range
+  * No default index position. Must include the ending index position in the range() parameters.
+  * The value of the ending index position is excluded from the range.
+  * To include the ending index number, use the expression: **y+1** (index + 1)
+    * Example syntax: range(x, **y+1**, z)
+  * Alternatively, if **y** = 10, you can write: range(x, **11**, z)
+* **z = Step** - Incremental value
+  * Default increment is +1.
+  * The default value can be overridden with any valid increment.
+  * The incremental value will end the for loop before it reaches the end of range index position (end of range index minus 1).
+
+**Example** 
+- For loop with the in keyword and the range() function:
+```python
+# This loop iterates on the value of the "number" variable in a range
+# of 1 to 6+1 (the upper range limit of 6 is excluded, so +1 has
+# been added to it to include 6 in the range). The incremental value
+# for the loop is 2 (number+2). The print() function will output the
+# resulting value of "number" multiplied by 3.
+
+for number in range(1,6+1,2):
+    print(number*3)
+
+# The loop should print 3, 9, 15
+```
+
+- Nested for Loops
+syntax
+```python
+for x in sequence:
+    # start of the outer loop body
+    for y in sequence:
+        # start of the inner loop body
+
+        # end of of the inner loop body
+    # continue body of the outer loop
+    # end of the outer loop body
+```
+**Example**
+```python
+# This code demonstrates the outer and inner loop iterations of a pair 
+# of nested for loops. Click "Run" to see the results. The outer loop
+# will run twice for the range pointer positions [0, 1] in range(2).
+# The inner loop will run 4 times for the range pointer positions 
+# [0, 1, 2, 3] in range(3+1) or range(4) each time the outer loop runs.
+# So, the inner loop will execute 8 times in total.
+
+
+for x in range(2):
+    print("This is the outer loop iteration number " + str(x))
+    for y in range(3+1):
+        print("Inner loop iteration number " + str(y))
+    print("Exit inner loop")
+```
