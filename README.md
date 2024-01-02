@@ -159,6 +159,8 @@ Python comparison operators return Boolean results: `True` or `False`.
 | `<`    | Less than operator                 | `a < b`    | `a` is smaller than `b`            |
 | `<=`   | Less than or equal to operator     | `a <= b`   | `a` is smaller than or equal to `b`|
 
+# Loops
+
 ## while Loops
 A `while` loop executes the body of the loop while a specified condition remains True. They are commonly used when there’s an unknown number of operations to be performed, and a condition needs to be checked at each iteration.
 
@@ -272,3 +274,107 @@ def recursive_function(parameters):
         return base_case_value
     recursive_function(modified_parameters)
 ```
+# Strings
+
+## String operations
+* `len(string)` - Returns the length of the string
+```python
+print(len("abcde"))        # prints 5
+```
+
+* `for character in string` - Iterates over each character in the string
+```python
+for c in "abcde":
+print(c)                   # prints "a", then "b", then "c", etc.
+```
+
+* `if substring in string` - Checks whether the substring is part of the string
+```python
+print("abc" in "abcde")     # prints True
+print("def" in "abcde")     # prints False
+```
+
+* `string[i]` - Accesses the character at index i of the string, starting at zero
+```python
+print("abcde"[2])           # prints "c"
+print("abcde"[-1])          # prints "e"
+```
+
+* `string[i:j]` - Accesses the substring starting at index i, ending at index j minus 1. If i is omitted, its value defaults to 0. If j is omitted, Python returns everything from i to the end of the string.
+```python
+print("abcde"[0:2])         # prints "ab"
+print("abcde"[2:])          # prints "cde"
+```
+
+## String Methods
+* `string.lower()` - Returns a copy of the string with all lowercase characters
+```python
+print("AaBbCcDdEe".lower())             # prints "aabbccddee"
+```
+
+* `string.upper()` - Returns a copy of the string with all uppercase characters
+```python
+print("AaBbCcDdEe".upper())             # prints "AABBCCDDEE"
+```
+
+* `string.lstrip()` - Returns a copy of the string with the left-side whitespace removed
+```python
+print("   Hello   ".lstrip())           # prints "Hello   "
+```
+
+* `string.rstrip()` - Returns a copy of the string with the right-side whitespace removed
+```python
+print("   Hello   ".rstrip())           # prints "   Hello"
+```
+
+* `string.strip()` - Returns a copy of the string with both the left and right-side whitespace removed
+```python
+print("   Hello   ".strip())            # prints "Hello"
+```
+
+* `string.count(substring)`- Returns the number of times substring is present in the string
+```python
+test = "How much wood would a woodchuck chuck"
+print(test.count("wood"))               # prints 2
+```
+
+* `string.isnumeric()` - Returns True if there are only numeric characters in the string. If not, returns False.
+```python
+print("12345".isnumeric())              # prints True
+print("-123.45".isnumeric())            # prints False
+```
+
+* `string.isalpha()` - Returns True if there are only letters in the string. If not, returns False.
+```python
+print("xyzzy".isalpha())                # prints True
+```
+
+* `string.split()` - Returns a list of substrings that were separated by whitespace (whitespace can be a space, tab, or new line)
+```python
+print(test.split())    # prints ['How', 'much', 'wood', 'would', 'a', 'woodchuck', 'chuck']
+```
+
+* `string.split(delimiter)` - Returns a list of substrings that were separated by whitespace or another string
+```python
+test = "How-much-wood-would-a-woodchuck-chuck"
+print(test.split("-"))  # prints ['How', 'much', 'wood', 'would', 'a', 'woodchuck', 'chuck']
+```
+
+* `string.replace(old, new)` - Returns a new string where all occurrences of old have been replaced by new.
+```python
+print(test.replace("wood", "plastic"))  # prints "How much plastic would a plasticchuck chuck"
+```
+
+* `delimiter.join(list of strings)` - Returns a new string with all the strings joined by the delimiter
+```python
+print("-".join(test.split()))           # prints "How-much-wood-would-a-woodchuck-chuck"
+```
+## Formatting expressions
+| Expr | Meaning                       | Example                         |
+|------|-------------------------------|---------------------------------|
+| `{:d}` | integer value                | `'{0:0f}'.format(10.5) → '10'`    |
+| `{:2f}` | floating point with that many decimals | `'{0:2f}'.format(0.5) → '0.50'` |
+| `{:2s}` | string with that many characters | `'{0:2s}'.format('Python') → 'Py'` |
+| `{:<6s}` | string aligned to the left that many spaces | `'{0:<6s}'.format('Py') → 'Py    '` |
+| `{:>6s}` | string aligned to the right that many spaces | `'{0:>6s}'.format('Py') → '    Py'`|
+| `{:^6s}` | string centered in that many spaces | `'{0:^6s}'.format('Py') → '  Py  '` |
